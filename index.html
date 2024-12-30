@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav {
+            background-color: #3f42e0;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background: #3f42e0;
+            color: white;
+            width: 100%;
+        }
+        .content, .about-me, .experience-container, .new-box-container {
+            max-width: 800px;
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .text-content {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3f42e0;
+            color: white;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        ul li img {
+            margin-right: 10px;
+        }
+        .experience-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .new-box-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .new-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 250px;
+        }
+        .new-box-icon {
+            font-size: 40px;
+            color: #3f42e0;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #3f42e0;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Pratama Randatiansyah",
+        "jobTitle": "Mahasiswa Ilmu Komputer",
+        "affiliation": {
+            "@type": "EducationalOrganization",
+            "name": "Universitas Yatsi Madani"
+        },
+        "email": "rands2807@gmail.com",
+        "telephone": "+62895320637109",
+        "url": "https://www.instagram.com/raaandsss_",
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "SMK Bina Putra Mandiri"
+        },
+        "knowsAbout": [
+            "Python",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Network Management",
+            "Data Analysis",
+            "Leadership",
+            "Problem Solving"
+        ],
+        "sameAs": [
+            "https://www.instagram.com/raaandsss_"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#profile">Profil</a></li>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#skills">Keterampilan</a></li>
+            <li><a href="#education">Riwayat Pendidikan</a></li>
+            <li><a href="#experience">Pengalaman Kerja</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+
+    <div id="profile" class="content">
+        <img src="nametag.jpg" alt="Muhammad Pratama Randatiansyah" class="profile-photo">
+        <div class="text-content">
+            <p><strong>Universitas Yatsi Madani</strong></p>
+            <p><strong>Mahasiswa | Ilmu Komputer</strong></p>
+            <table>
+                <tr>
+                    <th colspan="2">Informasi Pribadi</th>
+                </tr>
+                <tr>
+                    <td><strong>Nama</strong></td>
+                    <td>Muhammad Pratama Randatiansyah</td>
+                </tr>
+                <tr>
+                    <td><strong>NIM</strong></td>
+                    <td>23050941</td>
+                </tr>
+                <tr>
+                    <td><strong>Mata Kuliah</strong></td>
+                    <td>Jaringan Semantik</td>
+                </tr>
+                <tr>
+                    <td><strong>Dosen Pengampu</strong></td>
+                    <td>Ihsan Maulana, S.Kom, M.T.I</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="about" class="about-me">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah mahasiswa Ilmu Komputer di Universitas Yatsi Madani dengan semangat belajar yang tinggi. Saya memiliki pengalaman dasar dalam pemrograman dan antusias dalam menjelajahi teknologi. Hobi saya bermain game sering menjadi inspirasi dalam berpikir kreatif dan pemecahan masalah.
+            Fokus saya pada pengembangan perangkat lunak, jaringan komputer, dan pemecahan masalah dengan pemrograman berbasis teknologi dan inovasi terkini.
+        </p>
+    </div>
+
+    <div id="education" class="about-me">
+        <h2>Riwayat Pendidikan</h2>
+        <table>
+            <tr>
+                <th>Jenjang</th>
+                <th>Nama Sekolah</th>
+                <th>Tahun</th>
+            </tr>
+            <tr>
+                <td>SD</td>
+                <td>SD Negeri Rabak</td>
+                <td>2009 - 2015</td>
+            </tr>
+            <tr>
+                <td>SMP</td>
+                <td>SMP Negeri 1 Parung Panjang</td>
+                <td>2015 - 2018</td>
+            </tr>
+            <tr>
+                <td>SMK</td>
+                <td>SMK Bina Putra Mandiri</td>
+                <td>2018 - 2021</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="skills" class="about-me">
+        <h2>Keterampilan dan Minat</h2>
+        <ul>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Logo">
+                Pengembangan Perangkat Lunak (Python, JavaScript, HTML, CSS)
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/network.png" alt="Network Logo">
+                Manajemen Jaringan Dasar
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel Logo">
+                Analisis Data (Microsoft Excel, Tableau)
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/project.png" alt="Project Logo">
+                Pemrograman Berbasis Proyek
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/handshake.png" alt="Soft Skills Logo">
+                Soft Skills: Kepemimpinan, Problem Solving, Komunikasi
+            </li>
+        </ul>
+    </div>
+
+    <div id="experience" class="about-me">
+        <h2>Pengalaman Kerja</h2>
+        <div class="experience-container">
+            <div class="experience-box">
+                <h3>Produksi (PKL)</h3>
+                <p>PT. Cheong Woon Indonesia (2019, 3 Bulan)</p>
+            </div>
+            <div class="experience-box">
+                <h3>Cook Helper</h3>
+                <p>Restaurant The Leaf (2021, 6 Bulan)</p>
+            </div>
+            <div class="experience-box">
+                <h3>Warehouse Staff</h3>
+                <p>PT. Indomarco Prismatama (2022 - 2023)</p>
+            </div>
+            <div class="experience-box">
+                <h3>Warehouse Worker (Freelance)</h3>
+                <p>PT. Shopee Indonesia (2023, 3 Bulan)</p>
+            </div>
+            <div class="experience-box">
+                <h3>Warehouse Worker (Freelance)</h3>
+                <p>PT. Global Jet Express (2024, 9 Bulan)</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="new-box-container">
+        <div class="new-box">
+            <div class="new-box-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>rands2807@gmail.com</p>
+        </div>
+        <div class="new-box">
+            <div class="new-box-icon">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>+62895320637109</p>
+        </div>
+        <div class="new-box">
+            <div class="new-box-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <h3>Instagram</h3>
+            <p><a href="https://www.instagram.com/raaandsss_" target="_blank">raaandsss_</a></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Muhammad Pratama Randatiansyah  All rights reserved.
+    </footer>
+</body>
+</html>
