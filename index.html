@@ -86,10 +86,19 @@ h2{font-size:clamp(1.6rem,3.4vw,2.2rem); color:var(--ink);}
 
 /* experience */
 .exp{display:flex; flex-direction:column; gap:10px;}
-.exp-row{display:grid; grid-template-columns:110px 1fr; gap:18px; padding:16px 18px; background:var(--card); border:1px solid var(--line); border-radius:14px;}
-.exp-row .yr{font-family:'IBM Plex Mono'; font-size:.82rem; color:var(--rust); padding-top:3px;}
+.exp-row{display:grid; grid-template-columns:110px 1fr; gap:18px; padding:18px 18px; background:var(--card); border:1px solid var(--line); border-radius:14px;}
+.exp-row .yr{font-family:'IBM Plex Mono'; font-size:.8rem; color:var(--rust); padding-top:3px;}
 .exp-row h4{font-size:1.08rem;}
-.exp-row .place{color:var(--muted); font-size:.92rem; margin-top:2px;}
+.exp-row .place{color:var(--muted); font-size:.9rem; margin-top:2px;}
+.exp-row ul{margin-top:10px; padding-left:18px; display:flex; flex-direction:column; gap:4px;}
+.exp-row li{font-size:.88rem; color:#33415f; line-height:1.4;}
+
+/* certifications */
+.certs{display:flex; flex-direction:column; gap:10px;}
+.cert-row{display:flex; justify-content:space-between; align-items:baseline; gap:14px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; flex-wrap:wrap;}
+.cert-row h4{font-size:1.02rem;}
+.cert-row .place{color:var(--muted); font-size:.88rem; margin-top:2px;}
+.cert-row .yr{font-family:'IBM Plex Mono'; font-size:.8rem; color:var(--rust); white-space:nowrap;}
 
 /* contact */
 .contact{background:var(--ink); color:var(--paper);}
@@ -120,8 +129,8 @@ footer{max-width:1040px; margin:0 auto; padding:26px 24px 40px; display:flex; ju
 }
 @media (max-width:600px){
   .navlinks{display:none;}
-  .manifest{grid-template-columns:1fr;}
-  .manifest div:nth-child(odd){padding-right:0;}
+  .exp-row{grid-template-columns:1fr;}
+  .cert-row{flex-direction:column; align-items:flex-start;}
 }
 </style>
 </head>
@@ -136,6 +145,7 @@ footer{max-width:1040px; margin:0 auto; padding:26px 24px 40px; display:flex; ju
       <li><a href="#skills">Keterampilan</a></li>
       <li><a href="#education">Pendidikan</a></li>
       <li><a href="#experience">Pengalaman</a></li>
+      <li><a href="#certifications">Sertifikasi</a></li>
       <li><a href="#contact">Kontak</a></li>
     </ul>
   </div>
@@ -156,20 +166,22 @@ footer{max-width:1040px; margin:0 auto; padding:26px 24px 40px; display:flex; ju
 
 <section id="about" class="about">
   <div class="sec-head"><span class="no">01</span><h2>Tentang Saya</h2></div>
-  <p>Saya mahasiswa Ilmu Komputer di Universitas Yatsi Madani dengan semangat belajar yang tinggi dan pengalaman dasar dalam pemrograman. Fokus saya ada pada pengembangan perangkat lunak, jaringan komputer, dan pemecahan masalah berbasis data — sesuatu yang juga saya bawa dari pengalaman kerja di lapangan operasional pergudangan. Hobi bermain game sering jadi pemantik cara berpikir kreatif dan analitis saya dalam menghadapi masalah teknis.</p>
+  <p>Saya mahasiswa Ilmu Komputer di Universitas Yatsi Madani dengan pengalaman lebih dari tiga tahun di bidang operasional gudang — mencakup manajemen stok, stock opname, hingga monitoring arus barang masuk dan keluar. Terbiasa bekerja teliti, disiplin, dan terbiasa dengan sistem kerja berbasis data.</p>
 </section>
 
 <section id="skills">
   <div class="sec-head"><span class="no">02</span><h2>Keterampilan &amp; Minat</h2></div>
   <div class="skills">
     <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3h8a2 2 0 012 2v3a2 2 0 01-2 2H8l-4 4V5a2 2 0 012-2z"/><path d="M4 21h16"/></svg>
-      <div><h4>Pengembangan Perangkat Lunak</h4><p>Python, JavaScript, HTML, CSS</p></div></div>
+      <div><h4>Pengembangan Perangkat Lunak</h4><p>Python, Java, JavaScript, HTML, CSS, MySQL</p></div></div>
     <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12h8m-4-6l4 6m-4 6l4-6"/></svg>
       <div><h4>Manajemen Jaringan Dasar</h4><p>Topologi, konfigurasi, troubleshooting</p></div></div>
     <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 9h18M9 9v12"/></svg>
       <div><h4>Analisis Data</h4><p>Microsoft Excel, Tableau</p></div></div>
     <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
       <div><h4>Pemrograman Berbasis Proyek</h4><p>Perencanaan hingga eksekusi</p></div></div>
+    <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="1.5"/><path d="M3 10h18M7 15h4"/></svg>
+      <div><h4>ERP/WMS &amp; Inventory</h4><p>Odoo, manajemen stok, stock opname</p></div></div>
     <div class="skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 12a4 4 0 108 0 4 4 0 00-8 0z"/><path d="M2 20c1.5-3.5 4.5-5 10-5s8.5 1.5 10 5"/></svg>
       <div><h4>Soft Skills</h4><p>Kepemimpinan, problem solving, komunikasi</p></div></div>
   </div>
@@ -187,16 +199,38 @@ footer{max-width:1040px; margin:0 auto; padding:26px 24px 40px; display:flex; ju
 <section id="experience">
   <div class="sec-head"><span class="no">04</span><h2>Pengalaman Kerja</h2></div>
   <div class="exp">
-    <div class="exp-row"><div class="yr">2019</div><div><h4>Produksi (PKL)</h4><div class="place">PT. Cheong Woon Indonesia — 3 bulan</div></div></div>
-    <div class="exp-row"><div class="yr">2021</div><div><h4>Cook Helper</h4><div class="place">Restaurant The Leaf — 6 bulan</div></div></div>
-    <div class="exp-row"><div class="yr">2022–23</div><div><h4>Warehouse Staff</h4><div class="place">PT. Indomarco Prismatama</div></div></div>
-    <div class="exp-row"><div class="yr">2023</div><div><h4>Warehouse Worker (Freelance)</h4><div class="place">PT. Shopee Indonesia — 3 bulan</div></div></div>
-    <div class="exp-row"><div class="yr">2024</div><div><h4>Warehouse Worker (Freelance)</h4><div class="place">PT. Global Jet Express — 9 bulan</div></div></div>
+    <div class="exp-row"><div class="yr">Sep 2025 —<br>Sep 2026</div><div>
+      <h4>Admin Warehouse</h4><div class="place">PT Super Ekonomi Retailindo, Tangerang Selatan</div>
+      <ul><li>Menginput data barang retur ke dalam sistem</li><li>Memantau stok gudang dan menginvestigasi kehilangan barang</li></ul>
+    </div></div>
+    <div class="exp-row"><div class="yr">Mei 2024 —<br>Sep 2025</div><div>
+      <h4>Processing</h4><div class="place">PT Global Jet Express, Bogor</div>
+      <ul><li>Memindai paket dan mengelompokkan berdasarkan tujuan/wilayah</li><li>Mengemas paket dan memindahkannya ke kendaraan pengangkut</li></ul>
+    </div></div>
+    <div class="exp-row"><div class="yr">Sep 2022 —<br>Feb 2023</div><div>
+      <h4>Daily Worker Warehouse</h4><div class="place">PT Shopee Indonesia, Jakarta</div>
+      <ul><li>Mengurutkan, membungkus ulang, dan menyortir barang sesuai tujuan</li><li>Melakukan proses inbound barang yang tiba di gudang</li></ul>
+    </div></div>
+    <div class="exp-row"><div class="yr">Feb — Agu<br>2022</div><div>
+      <h4>Warehouse Staff</h4><div class="place">PT Indomarco Prismatama, Bogor</div>
+      <ul><li>Memeriksa kondisi barang dan melakukan stock opname</li><li>Mempersiapkan serta memproses barang sesuai permintaan</li></ul>
+    </div></div>
+    <div class="exp-row"><div class="yr">2021</div><div>
+      <h4>Cook Helper</h4><div class="place">Restaurant The Leaf — 6 bulan</div>
+    </div></div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="sec-head"><span class="no">05</span><h2>Sertifikasi</h2></div>
+  <div class="certs">
+    <div class="cert-row"><div><h4>PRAKERIN</h4><div class="place">PT Cheong Woon Indonesia</div></div><div class="yr">Mei 2020</div></div>
+    <div class="cert-row"><div><h4>Sertifikat Kompetensi</h4><div class="place">PT Media Data Communication</div></div><div class="yr">Mei 2021</div></div>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <div class="sec-head"><span class="no">05</span><h2>Kontak</h2></div>
+  <div class="sec-head"><span class="no">06</span><h2>Kontak</h2></div>
   <div class="contact-grid">
     <div class="c-card">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg>
